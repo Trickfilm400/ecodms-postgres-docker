@@ -1,7 +1,7 @@
 # ecodms-postgres-docker
 
-This docker image is a custom installation of ecodms without a postgres database inside the ecodms docker.
-The postgres database needs to be a separate database. (This approach is more docker-native and a custom postgres installation (e. g. cluster) can be used)
+This docker image is a custom installation of [ecodms](https://www.ecodms.de/en/ecodms-archiv) without a postgres database inside the ecodms docker.
+The postgres database needs to be a separate database. (This approach is more [docker-native/best-practise](https://docs.docker.com/build/building/best-practices/#decouple-applications) and a custom postgres installation (e. g. cluster) can be used)
 
 ## Usage
 Build the container with `docker build -t localhost:5000/ecodms src/`
