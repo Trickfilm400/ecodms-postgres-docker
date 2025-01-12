@@ -1,0 +1,23 @@
+services:
+  postgres:
+    environment:
+      - POSTGRES_PASSWORD=eco
+      - POSTGRES_USER=ecosims
+      - POSTGRES_DB=ecodms
+    ports:
+      - 5432:5432
+    image: postgres:15
+    # for not persisting the database - only useful for testing
+    #tmpfs: /var/lib/postgresql/data
+    volumes:
+      - ./db:/var/lib/postgresql/data
+  ecodms:
+    depends_on:
+      - postgres
+    ports:
+      - 17001:17001
+      - 8080:8080
+      - 8180:8180
+    image: localhost:5000/ecodms
+    volumes:
+      - ./ecodms:/data/
