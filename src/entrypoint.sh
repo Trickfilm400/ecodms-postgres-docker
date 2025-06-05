@@ -1,6 +1,9 @@
 #!/bin/bash
 cd /opt/ecodms/ecodmsserver/
 
+# update ecodms config file (setting postgres connection etc.)
+bash /opt/start.sh
+
 mkdir -p /data/workdir/
 mkdir -p /data/log
 mkdir -p /data/contentstore

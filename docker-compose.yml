@@ -14,6 +14,14 @@ services:
   ecodms:
     depends_on:
       - postgres
+    environment:
+      # these are the default values
+      - ECODMS_LOGLEVEL=INFO
+      - ECODMS_POSTGRES_HOST=postgres
+      - ECODMS_POSTGRES_PORT=5432
+      - ECODMS_POSTGRES_USERNAME=ecosims
+      - ECODMS_POSTGRES_PASSWORD=eco
+      - ECODMS_POSTGRES_DATABASE=ecodms
     ports:
       - 17001:17001
       - 8080:8080
