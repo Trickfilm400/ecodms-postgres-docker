@@ -14,7 +14,7 @@ mkdir -p /data/dupai
 ############## backup
 BACKUP_PATH=/data/restore
 if [ -f $BACKUP_PATH/restore.zip ] && [ -n $BACKUP_RESTORE ]; then
-  LD_LIBRARY_PATH=/opt/ecodms/ecodmsserver/tools /opt/ecodms/ecodmsserver/tools/ecoDMSBackupConsole $BACKUP_PATH/restore.zip restorenas
+  LD_LIBRARY_PATH=/opt/ecodms/ecodmsserver/tools /opt/ecodms/ecodmsserver/tools/ecoDMSBackupConsole $BACKUP_PATH/restore.zip restore
   if [ $? -ne 0 ]
   then
         mv $BACKUP_PATH/restore.zip $BACKUP_PATH/restore-failed.zip
