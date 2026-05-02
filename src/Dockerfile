@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 # install
 RUN apt update && apt upgrade -y && apt install curl wget ca-certificates -y --no-install-recommends && rm -rf /var/lib/apt/lists/*
-RUN echo "deb https://www.ecodms.de/ecodms_250264/bookworm /" > /etc/apt/sources.list.d/ecodms.list
+RUN echo "deb https://www.ecodms.de/ecodms_260164/bookworm /" > /etc/apt/sources.list.d/ecodms.list
 RUN wget -O /etc/apt/trusted.gpg.d/ecodms.asc https://www.ecodms.de/gpg/ecodms.key
 # add psql client 18
 RUN install -d /usr/share/postgresql-common/pgdg
